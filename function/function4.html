@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>javascript function</h2>
+    <p id="demo"></p>
+    <button type="button" onclick="test(1,2)">결과확인</button>
+    <script>
+      function test(a, b, c, d) {
+        // 매개변수의 숫자가 맞지 않는 경우 매개변수 초기화
+        b = b || 5;
+        c = c || 57;
+        d = d || 273;
+
+        let result = a + b + c + d;
+        document.getElementById("demo").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

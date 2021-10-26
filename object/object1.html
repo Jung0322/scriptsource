@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var student = {
+        name: "홍길동",
+        kor: 95,
+        math: 98,
+        eng: 86,
+        sci: 98,
+        sum: function () {
+          return this.kor + this.math + this.eng + this.sci;
+        },
+      };
+
+      document.write(student.name + "<br>");
+      document.write(student.kor + "<br>");
+      document.write(student.math + "<br>");
+      document.write(student.eng + "<br>");
+      document.write(student.sci + "<br>");
+      var a = student.sum();
+      document.write("총합: " + a + "<br>");
+    </script>
+  </body>
+</html>

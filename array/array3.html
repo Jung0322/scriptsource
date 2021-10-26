@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = new Array();
+      arr.push(75);
+      arr.push(85);
+      for (let i of arr) {
+        document.write(i + "<br>");
+      }
+      document.write("<br><br>");
+      document.write("연결" + arr.join("_") + "<br>");
+      document.write("다른 배열과 연결" + arr.concat([2, 4, 6, 8]) + "<br>");
+      document.write("요소 자르기 " + arr.slice(1, 3) + "<br>");
+    </script>
+  </body>
+</html>
