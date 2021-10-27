@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>The Light Bulb</h2>
+    <button type="button" onclick="on()">Turn on the light</button>
+    <img src="pic_bulboff.gif" alt="꺼짐" />
+    <button type="button" onclick="off()">Turn on the light</button>
+    <script>
+      let img = document.querySelector("img");
+      function on() {
+        img.src = "pic_bulbon.gif";
+        img.alt = "켜짐";
+      }
+      function off() {
+        img.src = "pic_bulboff.gif";
+        img.alt = "꺼짐";
+      }
+    </script>
+  </body>
+</html>

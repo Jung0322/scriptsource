@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header" class="header" onclick="change()">Header1</h1>
+    <script>
+      function change() {
+        //h1 태그의 style 동적으로 변경
+
+        let h1 = document.querySelector("#header");
+
+        h1.style.color = "blue";
+        h1.style.border = "1px solid red";
+        h1.style.padding = "10px";
+        // css에서 -는 스크립트에서는 -없애고 대문자로 변경
+        h1.style.fontSize = "35px";
+      }
+    </script>
+  </body>
+</html>

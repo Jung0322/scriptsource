@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header" class="header" onclick="change()">Header1</h1>
+    <h1>Header2</h1>
+    <button type="button" onclick="remove()">삭제</button>
+    <script>
+      function remove() {
+        //제거해야할 요소 가져오기
+        let h1 = document.querySelector("h1");
+        //body 제거
+        document.body.removeChild(h1);
+      }
+      function change() {
+        //속성 제거
+        //제거해야할 요소 가져오기
+        let h1 = document.querySelector("h1");
+
+        h1.removeAttribute("class");
+      }
+    </script>
+  </body>
+</html>

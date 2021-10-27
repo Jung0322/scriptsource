@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul name="list">
+      <li>List item1</li>
+      <li>List item2</li>
+      <li>List item3</li>
+      <li>List item4</li>
+      <li>List item5</li>
+    </ul>
+    <script>
+      //NodeList
+      let list = document.getElementsByName("list");
+      console.log(list);
+
+      list.forEach((element) => {
+        console.log(element.innerText);
+      });
+      //HTMLCollection
+      let list1 = document.getElementsByTagName("ul");
+      //   list1.forEach((element) => {
+      //     console.log(element.innerText);
+      //   });
+    </script>
+  </body>
+</html>

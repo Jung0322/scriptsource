@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>클릭하면 사라집니다</h2>
+    <p class="para1">이것은 문단입니다.</p>
+    <p id="para2">이것은 두번째 문단입니다.</p>
+    <!-- jQuery 라이브러리 로드 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jQuery 기반의 스크립트 코드 -->
+    <script>
+      // javascript 코드와 jquery 코드 혼용가능
+
+      //jquery => $ 로 시작($==jquery)
+      $(function () {});
+
+      //h2 요소 숨기기
+      $("h2").click(function () {
+        $("h2").hide();
+      });
+
+      //para1 요소는 가져온 후 글자 색상을 변경
+      $(".para1").click(function () {
+        $(this).css("color", "#669900");
+      });
+
+      //para2 요소 숨기기
+      $("#para2").click(function () {
+        $(this).hide();
+      });
+    </script>
+  </body>
+</html>

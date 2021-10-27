@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function () {
+        //img 태그 생성 후 속성 채우기
+        let img = document.createElement("img");
+        img.setAttribute("src", "bg0.jpg");
+        img.setAttribute("alt", "그림");
+        img.setAttribute("width", "250px");
+        img.setAttribute("height", "250px");
+        // img.src = "bg0.jpg";
+        // img.alt = "그림";
+        document.body.appendChild(img);
+      };
+    </script>
+  </body>
+</html>
