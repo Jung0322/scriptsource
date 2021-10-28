@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="checkbox" name="fruit" id="" value="사과" />사과
+      <input type="checkbox" name="fruit" id="" value="포도" />포도
+      <input type="checkbox" name="fruit" id="" value="바나나" />바나나
+      <input type="checkbox" name="fruit" id="" value="파인애플" />파인애플
+      <button type="button">보내기</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          console.log($(":checkbox:checked").val());
+
+          var chkfruits = "";
+          $(":checkbox:checked").each(function () {
+            chkfruits += $(this).val();
+          });
+          console.log(chkfruits);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" id="num1" name="num1" size="10" />
+        <select name="" id="">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value=".">/</option>
+        </select>
+        <input type="text" id="num2" name="num2" size="10" />
+        =
+        <input type="text" id="result" name="result" size="10" />
+      </div>
+      <div>
+        <button type="button">더하기</button>
+      </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          let num1 = $("#num1");
+          let num2 = $("#num2");
+          let result = $("#result");
+          let op = $("select");
+
+          let sum;
+          switch (op.val()) {
+            case "+":
+              sum = parseInt(num1.val()) + parseInt(num2.val());
+              break;
+            case "-":
+              sum = parseInt(num1.val()) - parseInt(num2.val());
+              break;
+            case "/":
+              sum = parseInt(num1.val()) / parseInt(num2.val());
+              break;
+            case "*":
+              sum = parseInt(num1.val()) * parseInt(num2.val());
+              break;
+          }
+
+          result.val(sum);
+        });
+      });
+
+      // function process() {
+      //   let num1 = document.querySelector("#num1");
+      //   let num2 = document.querySelector("#num2");
+      //   let result = document.querySelector("#result");
+      //   let op = document.querySelector("select");
+
+      //   let sum;
+      //   switch (op.value) {
+      //     case "+":
+      //       sum = parseInt(num1.value) + parseInt(num2.value);
+      //       break;
+      //     case "-":
+      //       sum = parseInt(num1.value) - parseInt(num2.value);
+      //       break;
+      //     case "/":
+      //       sum = parseInt(num1.value) / parseInt(num2.value);
+      //       break;
+      //     case "*":
+      //       sum = parseInt(num1.value) * parseInt(num2.value);
+      //       break;
+      //   }
+
+      //   result.value = sum;
+      // }
+    </script>
+  </body>
+</html>
