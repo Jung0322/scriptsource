@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        display: none;
+        color: red;
+        margin-top: 0;
+        font-size: 0, 8em;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <label for="tel">전화번호</label>
+        <input
+          type="text"
+          name="tel"
+          id="tel"
+          onfocus="inputClear()"
+          placeholder="000-0000-0000 형식"
+        />
+      </div>
+      <input type="button" value="전송" onclick="telCheck()" />
+    </form>
+    <p id="result"></p>
+    <script>
+      let result = document.querySelector("#result");
+
+      function inputClear() {
+        document.querySelector("[name='tel']").value = "";
+        result.innerText = "";
+        result.style.display = "none";
+      }
+
+      function telCheck() {
+        //전화번호 입력값을 가져오기
+        let tel = document.querySelector("[name='tel']").value;
+
+        //전화번호가 원하는 패턴을 갖췄는지 확인(test함수)
+        const reg = /^\d{3}-\d{4}-\d{4}$/;
+        let flag = reg.test(tel);
+
+        //결과를 result 보여주기
+        // document.querySelector("#result").innerText = flag;
+
+        if (!flag) {
+          result.style.display = "block";
+          result.innerText = "전화번호를 확인해 주세요";
+        }
+      }
+    </script>
+  </body>
+</html>

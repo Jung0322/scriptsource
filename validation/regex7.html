@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ko = "kokokoko";
+      const koooo = "kooookoooo";
+
+      //ko+: k, o (1~무한대)
+      console.log(ko.match(/ko+/));
+      console.log(koooo.match(/ko+/));
+      console.log("");
+      //(ko)+: ko (1~무한대)
+      console.log(ko.match(/(ko)+/));
+      console.log(koooo.match(/(ko)+/));
+      console.log("");
+
+      //괄호는 썼는데 캡처는 안함
+      console.log(ko.match(/(?:ko)+/));
+      console.log(koooo.match(/(?:ko)+/));
+      console.log("");
+
+      // \w+ == [A-za-z0-9]+ 캡처링
+      // \s == [공백,new line, tab]
+      //?= : 조건으로만 사용
+      //ab(?=) : c를 포함하고, 앞쪽에 ab라는 문자가 있는 경우를 찾기
+      //   단, 결과로 c는 받지 않음
+      // 후방탐색 : ?<=
+      let reg = /(\w+)\s(\w+)/;
+      let str = "John Smith";
+      console.log(str.match(reg));
+      console.log("");
+      let newStr = str.replace(reg, "$2, $1");
+      console.log(newStr);
+    </script>
+  </body>
+</html>

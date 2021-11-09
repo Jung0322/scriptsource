@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ko = "kokokoko";
+      const koooo = "kooookoooo";
+
+      //ko+: k, o (1~무한대)
+      console.log(ko.match(/ko+/));
+      console.log(koooo.match(/ko+/));
+      console.log("");
+      //(ko)+: ko (1~무한대)
+      console.log(ko.match(/(ko)+/));
+      console.log(koooo.match(/(ko)+/));
+      console.log("");
+
+      // \w+ == [A-za-z0-9]+ 캡처링
+      // \s == [공백,new line, tab]
+
+      let reg = /(\w+)\s(\w+)/;
+      let str = "John Smith";
+      console.log(str.match(reg));
+      console.log("");
+      let newStr = str.replace(reg, "$2, $1");
+      console.log(newStr);
+
+      const input =
+        "Regex pros jnow the difference between\n" +
+        "<i>greedy</i> and <i>lazy</i>matching.";
+
+      let regex = /<i>(.*?)<\/i>/gi;
+      console.log(input.match(regex));
+      console.log(input.replace(regex, "<strong>$1<\/strong>", ""));
+    </script>
+  </body>
+</html>

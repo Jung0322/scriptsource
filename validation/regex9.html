@@ -18,8 +18,8 @@
  -->
     <form action="">
       <div>
-        <label for="">이름</label>
-        <input type="text" name="name" />
+        <label for="">비밀번호</label>
+        <input type="text" name="name" onkeyup="idCheck(this.value)" />
       </div>
       <div>
         <button type="button" onclick="nameCheck()">전송</button>
@@ -28,17 +28,14 @@
     <p id="result" style="color: red"></p>
     <script>
       let result = document.querySelector("#result");
-      function nameCheck() {
-        let name = document.querySelector("[name='name']").value;
+      function idCheck(password) {
+        console.log(password);
 
-        const reg = /^[가-힣]{2,5}$/;
-        let flag = reg.test(name);
+        //비밀번호 유효성 검증
+        //영대소문자, 숫자, 특수문자(%$!)
+        const reg = /(?=.*[A-Za-z])(?=.*[\d])(?=.*[!$#])[A-Za-z\d!$#]{8,15}/;
 
-        if (!flag) {
-          result.innerText = "이름을 확인해주세요";
-        } else {
-          result.innerText = "";
-        }
+        document.querySelector("#result").innerHTML = reg.test(password);
       }
     </script>
   </body>

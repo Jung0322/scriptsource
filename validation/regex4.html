@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      031-873-1568 <br />
+      070-2586-1234 <br />
+      010-333-9087 <br />
+      02-890-0987
+    </p>
+    <p id="result" style="color: red"></p>
+    <script>
+      let p1 = document.querySelector("p").innerText;
+
+      console.log(p1);
+      console.log("");
+
+      //전화번호 패턴
+      result.innerText = p1.match(/\d{2,3}-\d{3,4}-\d{4}/g);
+    </script>
+  </body>
+</html>
